@@ -1,0 +1,9 @@
+name: 'Terraform'
+
+# Trigger the workflow on push and pull requests to main branch
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
