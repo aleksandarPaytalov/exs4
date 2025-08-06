@@ -24,8 +24,8 @@ resource "random_integer" "ri" {
 
 resource "azurerm_service_plan" "taskboard-service-plan" {
   name                = "${var.app_service_plan_name}${random_integer.ri.result}"
-  location            = var.resource_group_location
-  resource_group_name = var.resource_group_name
+  location            = azurerm_resource_group.alex-taskboard-rg.location
+  resource_group_name = azurerm_resource_group.alex-taskboard-rg.name
   os_type             = "Linux"
   sku_name            = var.app_service_plan_sku_name
 }
