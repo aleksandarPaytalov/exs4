@@ -5,6 +5,13 @@ terraform {
       version = "=4.0.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "StorageRG"
+    storage_account_name = "alextaskboardstorage"
+    container_name       = "alextaskboardcontainer"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
