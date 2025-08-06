@@ -55,7 +55,7 @@ resource "azurerm_app_service_source_control" "taskboard-source" {
   app_id                 = azurerm_linux_web_app.alwa.id
   repo_url               = var.repo_url
   branch                 = "main"
-  use_manual_integration = false
+  use_manual_integration = true
 }
 
 resource "azurerm_mssql_server" "taskboard-server" {
