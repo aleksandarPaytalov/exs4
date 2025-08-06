@@ -67,3 +67,9 @@ variable "random_integer_max_value" {
   type        = number
   description = "Maximum value for the random integer"
 }
+
+variable "github_token" {
+  description = "GitHub Personal Access Token for automatic deployment integration"
+  type        = string
+  sensitive   = true
+}
